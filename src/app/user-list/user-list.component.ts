@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import { UserModel } from '../models/user.model';
-import { UsuarioModel } from '../../../../07-bonus-loginApp/src/app/models/usuario.model';
 
 @Component({
   selector: 'app-user-list',
@@ -23,7 +22,7 @@ export class UserListComponent implements OnInit {
   }
   getUsers(){
     this.userService.getUsers(this.page)
-      .subscribe ( resp =>{ 
+      .subscribe ( resp =>{
         this.users = resp.data;
         this.total_page = resp.total_pages;
       })

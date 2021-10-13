@@ -6,11 +6,11 @@ import { RegisterComponent } from './register/register.component';
 import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'sign-in', pathMatch: 'full' },
   { path: 'user-list', component: UserListComponent },
   { path: 'sign-in', component: SignInComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'error/:status', component: ErrorComponent },
-  { path: '**', pathMatch: 'full', redirectTo: 'sign_in' }
+  { path: 'error/:status', component: ErrorComponent }
 ];
 
 @NgModule({

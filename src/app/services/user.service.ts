@@ -13,12 +13,9 @@ export class UserService {
 
   constructor( private http: HttpClient ) { }
 
-   deleteUser( user: UserModel) {
-    return this.http.delete(`${ this.url }/users/${ user.id }`, {observe: 'response'})
-   }
-
-
-
+  deleteUser( user: UserModel) {
+  return this.http.delete(`${ this.url }/users/${ user.id }`, {observe: 'response'})
+  }
 
 
   getUsers(page:number) {

@@ -10,6 +10,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { ErrorComponent } from './error/error.component';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { ErrorComponent } from './error/error.component';
     FormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

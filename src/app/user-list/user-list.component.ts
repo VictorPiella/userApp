@@ -22,7 +22,7 @@ export class UserListComponent implements OnInit {
   }
   getUsers(){
     this.userService.getUsers(this.page)
-      .subscribe ( resp =>{
+      .subscribe ( (resp: any) =>{
         this.users = resp.data;
         this.total_page = resp.total_pages;
       })

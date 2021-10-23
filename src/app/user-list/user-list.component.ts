@@ -23,9 +23,9 @@ export class UserListComponent implements OnInit {
   }
   getUsers(){
     this.userService.getUsers(this.page)
-      .subscribe ( resp =>{ 
-        this.users = resp.data;
-        this.total_page = resp.total_pages;
+      .subscribe ( (data : any) =>{ 
+        this.users = data.data;
+        this.total_page = data.total_pages;
       })
   }
 

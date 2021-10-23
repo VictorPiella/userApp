@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: 'sign-in', component: SignInComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'error/:status', component: ErrorComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'sign_in' },
   { path: '**', pathMatch: 'full', redirectTo: 'sign_in' }
 ];
 

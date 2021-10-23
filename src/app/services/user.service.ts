@@ -21,7 +21,7 @@ export class UserService {
 
 
 
-  getUsers(page:number) {
+  getUsers(page:number){
     return this.http.get(`${ this.url }/users?page=${ page }`)
   }
 
